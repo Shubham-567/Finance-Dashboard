@@ -155,7 +155,7 @@ export default function Topbar() {
       </div>
 
       {/* red navbar - hidden on smaller screens */}
-      <nav className='bg-red-500 text-white text-sm lg:text-lg hidden lg:flex justify-between items-center gap-4 py-2 px-8'>
+      <nav className='bg-red-500 text-white text-sm lg:text-base hidden lg:flex justify-between items-center gap-4 py-2 px-8'>
         {navItems.map((item) => (
           <a key={item} href='#' className='whitespace-nowrap hover:underline'>
             {item}
