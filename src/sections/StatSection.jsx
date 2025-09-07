@@ -31,7 +31,7 @@ const StatSection = () => {
       <FilterBar selected={selectedFilter} onSelect={setSelectedFilter} />
 
       {stats ? (
-        <div className='flex max-md:flex-col gap-4 max-lg:divide-y lg:divide-x divide-gray-400'>
+        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:divide-x divide-gray-400'>
           <StatCard
             icon={<HandCoins className='size-10 text-red-400' />}
             title='Purchases'

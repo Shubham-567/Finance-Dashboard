@@ -10,40 +10,12 @@ const colorMap = {
 };
 
 export const ClientsChart = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/finance/clients");
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Failed to fetch client data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className='flex items-center justify-center min-h-[250px]'>
-        Loading...
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className='flex items-center justify-center min-h-[250px]'>
-        Failed to load data.
-      </div>
-    );
-  }
+  const data = [
+    { label: "Online", value: 60, color: "orange" },
+    { label: "New", value: 2, color: "green" },
+    { label: "Active", value: 541, color: "red" },
+    { label: "Inactive", value: 3824, color: "darkred" },
+  ];
 
   // Find each specific data point to render it uniquely
   const onlineData = data.find((d) => d.label === "Online");

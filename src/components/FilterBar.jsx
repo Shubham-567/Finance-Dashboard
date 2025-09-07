@@ -9,7 +9,7 @@ const FilterBar = ({ selected, onSelect }) => {
         <button
           key={f}
           onClick={() => onSelect(f)}
-          className={`px-3 py-1 text-sm ${
+          className={`px-3 py-1 text-sm cursor-pointer ${
             selected === f
               ? "bg-red-200 text-red-500 font-semibold"
               : "font-medium"
