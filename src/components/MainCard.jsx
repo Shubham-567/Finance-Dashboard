@@ -6,7 +6,7 @@ const MainCard = ({ title, value, mom, trend }) => {
   const isUp = trend === "up";
 
   return (
-    <div className='relative flex flex-col justify-between gap-2 lg:items-center bg-gray-100 rounded-xl shadow p-4 w-full border border-gray-300 hover:shadow-lg transition-all duration-300'>
+    <div className='relative flex flex-col justify-between gap-2 lg:items-center card'>
       {/* card content  */}
       <p className='font-medium'>Current</p>
       <h3 className='text-3xl font-semibold'>
