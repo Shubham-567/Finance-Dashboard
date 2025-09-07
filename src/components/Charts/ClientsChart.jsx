@@ -1,7 +1,5 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-
 const colorMap = {
   orange: "hsl(25, 95%, 53%)",
   green: "hsl(142, 76%, 36%)",
