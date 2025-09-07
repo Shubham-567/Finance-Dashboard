@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Topbar />
-      <main className='p-4 md:px-8 space-y-4'>
+      <main id='pdf-content' className='p-4 md:px-8 space-y-4'>
         <MainCardSection />
         <StatSection />
         <GraphSection />

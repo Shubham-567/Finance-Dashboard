@@ -11,10 +11,10 @@ const MainCard = ({ title, value, mom, trend }) => {
       <p className='font-medium'>Current</p>
       <h3 className='text-3xl font-semibold'>
         {title} {value.split(" ")[0]}
-        <span className='text-xl text-gray-500'> {value.split(" ")[1]}</span>
+        <span className='text-xl text-txt-muted'> {value.split(" ")[1]}</span>
       </h3>
       <p className='flex items-center font-medium'>
-        <span className={`${isUp ? "text-green-500" : "text-red-500"}`}>
+        <span className={`${isUp ? "text-success" : "text-primary"}`}>
           {isUp ? <ChevronsUp /> : <ChevronsDown />}
         </span>
         {mom} MoM
@@ -26,7 +26,7 @@ const MainCard = ({ title, value, mom, trend }) => {
           View Report
         </button>
         <button
-          className='text-sm text-green-500 font-medium flex items-center hover:text-green-600 outline-none focus:ring-1 px-2 cursor-pointer'
+          className='text-sm text-success font-medium flex items-center hover:text-success-hover outline-none focus:ring-1 px-2 cursor-pointer'
           onClick={() => alert("View Trend")}>
           View Trend
           <span>

@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react";
 
 const colorMap = {
-  orange: "bg-orange-500",
-  green: "bg-green-600",
-  red: "bg-red-700",
-  darkred: "bg-orange-700",
+  orange: "hsl(25, 95%, 53%)",
+  green: "hsl(142, 76%, 36%)",
+  red: "hsl(0, 74%, 42%)",
+  darkred: "hsl(17, 88%, 40%)",
 };
 
 export const ClientsChart = () => {
@@ -29,29 +29,32 @@ export const ClientsChart = () => {
         {/* Active Circle */}
         {inactiveData && (
           <div
-            className={`absolute top-8 right-0 size-48 rounded-full flex items-center justify-center text-white text-3xl font-bold opacity-90 ${
-              colorMap[activeData.color]
-            }`}>
-            {activeData.value}
+            className='absolute top-8 right-0 size-48 rounded-full flex items-center justify-center text-white text-3xl font-bold opacity-90'
+            style={{
+              backgroundColor: colorMap[inactiveData.color],
+            }}>
+            {inactiveData.value}
           </div>
         )}
 
         {/* Inactive Circle */}
         {activeData && (
           <div
-            className={`absolute top-20 left-0 size-34 rounded-full flex items-center justify-center text-white text-4xl font-bold opacity-90 ${
-              colorMap[inactiveData.color]
-            }`}>
-            {inactiveData.value}
+            className='absolute top-20 left-0 size-34 rounded-full flex items-center justify-center text-white text-4xl font-bold opacity-90'
+            style={{
+              backgroundColor: colorMap[activeData.color],
+            }}>
+            {activeData.value}
           </div>
         )}
 
         {/* Online Circle */}
         {onlineData && (
           <div
-            className={`absolute top-0 left-20 size-24 rounded-full flex items-center justify-center text-white text-2xl font-bold opacity-90 ${
-              colorMap[onlineData.color]
-            }`}>
+            className='absolute top-0 left-20 size-24 rounded-full flex items-center justify-center text-white text-2xl font-bold opacity-90'
+            style={{
+              backgroundColor: colorMap[onlineData.color],
+            }}>
             {onlineData.value}
           </div>
         )}
@@ -59,9 +62,10 @@ export const ClientsChart = () => {
         {/* New Circle */}
         {newData && (
           <div
-            className={`absolute bottom-4 right-16 size-16 rounded-full flex items-center justify-center text-white text-lg font-bold opacity-90 ${
-              colorMap[newData.color]
-            }`}>
+            className='absolute bottom-4 right-16 size-16 rounded-full flex items-center justify-center text-white text-lg font-bold opacity-90'
+            style={{
+              backgroundColor: colorMap[newData.color],
+            }}>
             {newData.value}
           </div>
         )}
@@ -72,9 +76,12 @@ export const ClientsChart = () => {
         {data.map((item) => (
           <div
             key={item.label}
-            className='flex items-center gap-2 text-sm text-gray-600'>
+            className='flex items-center gap-2 text-sm text-txt-muted'>
             <span
-              className={`size-3 rounded-full ${colorMap[item.color]}`}></span>
+              className='size-3 rounded-full'
+              style={{
+                backgroundColor: colorMap[item.color],
+              }}></span>
             {item.label}
           </div>
         ))}

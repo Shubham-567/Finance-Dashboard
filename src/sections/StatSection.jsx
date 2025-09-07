@@ -31,33 +31,33 @@ const StatSection = () => {
       <FilterBar selected={selectedFilter} onSelect={setSelectedFilter} />
 
       {stats ? (
-        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:divide-x divide-gray-400'>
+        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:divide-x divide-border'>
           <StatCard
-            icon={<HandCoins className='size-10 text-red-400' />}
+            icon={<HandCoins className='size-10 text-primary' />}
             title='Purchases'
             value={stats.purchases.value}
             amount={stats.purchases.amount}
           />
           <StatCard
-            icon={<Wallet className='size-10 text-red-400' />}
+            icon={<Wallet className='size-10 text-primary' />}
             title='Redemptions'
             value={stats.redemptions.value}
             amount={stats.redemptions.amount}
           />
           <StatCard
-            icon={<Ban className='size-10 text-red-400' />}
+            icon={<Ban className='size-10 text-primary' />}
             title='Rej. Transactions'
             value={stats.rejectedTransactions.value}
             amount={stats.rejectedTransactions.amount}
           />
           <StatCard
-            icon={<XCircle className='size-10 text-red-400' />}
+            icon={<XCircle className='size-10 text-primary' />}
             title='SIP Rejections'
             value={stats.sipRejections.value}
             amount={stats.sipRejections.amount}
           />
           <StatCard
-            icon={<TrendingUp className='size-10 text-red-400' />}
+            icon={<TrendingUp className='size-10 text-primary' />}
             title='New SIP'
             value={stats.newSip.value}
             amount={stats.newSip.amount}

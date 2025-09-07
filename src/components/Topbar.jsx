@@ -62,7 +62,7 @@ export default function Topbar() {
   return (
     <header className='w-full shadow-md'>
       {/* white navbar */}
-      <div className='bg-white py-2 px-4 md:px-8 flex items-center justify-between gap-4 md:gap-10'>
+      <div className='bg-card py-2 px-4 md:px-8 flex items-center justify-between gap-4 md:gap-10'>
         <Image
           src='/logo.png'
           width={80}
@@ -72,7 +72,7 @@ export default function Topbar() {
         />
 
         {/* search bar */}
-        <div className='flex flex-1 items-center bg-gray-200 border border-gray-400 rounded focus-within:ring-2 focus-within:ring-blue-500 shadow-lg shadow-gray-200'>
+        <div className='flex flex-1 items-center bg-[#e5e7eb] border border-border rounded focus-within:ring-2 focus-within:ring-secondary shadow-lg shadow-[#e5e7eb]'>
           <input
             type='text'
             name='search'
@@ -86,7 +86,7 @@ export default function Topbar() {
           />
 
           <button
-            className='bg-gray-300 border-l border-gray-400 px-2 py-2 rounded cursor-pointer'
+            className='bg-[#d1d5dc] border-l border-border px-2 py-2 rounded cursor-pointer'
             onClick={handleSearch}>
             <Search className='size-4' />
           </button>
@@ -97,7 +97,7 @@ export default function Topbar() {
           {navIcons.map((item) => (
             <li
               key={item.name}
-              className={`cursor-pointer hover:text-blue-500 flex items-center gap-2 ${
+              className={`cursor-pointer hover:text-secondary flex items-center gap-2 ${
                 item.name === "LogOut" ? "border-l-2 pl-2" : ""
               }`}
               onClick={() => alert(`You clicked ${item.name}.`)}>
@@ -120,13 +120,13 @@ export default function Topbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-red-500 text-white transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 right-0 overflow-y-scroll h-full w-64 bg-primary text-primary-foreground transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}>
-        <div className='flex justify-between items-center p-4 border-b border-red-600'>
+        <div className='sticky top-0 flex justify-between items-center p-4 border-b bg-primary z-10 border-primary-hover'>
           <span className='text-lg font-bold'>Menu</span>
           <button onClick={() => setIsOpen(false)} aria-label='Close menu'>
-            <X className='size-6 cursor-pointer hover:bg-red-600 rounded-full' />
+            <X className='size-6 cursor-pointer hover:bg-primary-hover rounded-full' />
           </button>
         </div>
         <nav className='flex flex-col p-4 space-y-2'>
@@ -134,17 +134,17 @@ export default function Topbar() {
             <a
               key={item}
               href='#'
-              className='py-2 px-4 rounded hover:bg-red-600'
+              className='py-2 px-4 rounded hover:bg-primary-hover'
               onClick={() => setIsOpen(false)}>
               {item}
             </a>
           ))}
-          <hr className='my-2 border-red-400' />
+          <hr className='my-2 border-border' />
           <ul className='flex flex-col space-y-2'>
             {navIcons.map((item) => (
               <li
                 key={item.name}
-                className='flex items-center gap-2 py-2 px-4 rounded hover:bg-red-600 cursor-pointer'
+                className='flex items-center gap-2 py-2 px-4 rounded hover:bg-primary-hover cursor-pointer'
                 onClick={() => setIsOpen(false)}>
                 <item.icon className='size-5' />
                 <span>{item.name === "LogOut" ? "Logout" : item.name}</span>
@@ -155,7 +155,7 @@ export default function Topbar() {
       </div>
 
       {/* red navbar - hidden on smaller screens */}
-      <nav className='bg-red-500 text-white text-sm lg:text-base hidden lg:flex justify-between items-center gap-4 py-2 px-8'>
+      <nav className='bg-primary text-primary-foreground text-sm lg:text-base hidden lg:flex justify-between items-center gap-4 py-2 px-8'>
         {navItems.map((item) => (
           <a key={item} href='#' className='whitespace-nowrap hover:underline'>
             {item}

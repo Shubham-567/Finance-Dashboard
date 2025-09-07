@@ -3,24 +3,41 @@
 @import "tailwindcss";
 
 @layer base {
-  /* :root{
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-  } */
-
   body {
-    background: hsl(0, 0%, 90%);
+    background: hsl(0, 0%, 94%);
     color: hsl(0, 0%, 5%);
     font-family: "Inter", sans-serif;
   }
 }
 
+@theme {
+  --color-background: hsl(210 17% 94%);
+  --color-card: hsl(0 0% 100%);
+
+  --color-txt-primary: hsl(210 10% 23%);
+  --color-txt-muted: hsl(208 7% 46%);
+
+  --color-primary: hsl(0 94% 64%);
+  --color-primary-hover: hsl(357, 100%, 45%);
+
+  --color-primary-light: hsl(0, 100%, 94%);
+  --color-primary-light-hover: hsl(0, 100%, 89%);
+
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(216, 100%, 58%);
+
+  --color-border: hsl(218, 12%, 84%);
+  --color-success: hsl(134 61% 40%);
+  --color-success-hover: hsl(142, 100%, 33%);
+}
+
 @layer components {
   .btn-outline {
-    @apply px-2 py-1 bg-red-100 hover:bg-red-200 outline-none rounded ring ring-red-500 text-sm font-medium focus:ring-2 cursor-pointer;
+    @apply px-2 py-1 bg-primary-light hover:bg-primary-light-hover outline-none rounded ring ring-primary text-sm font-medium focus:ring-2 cursor-pointer;
   }
 
   .card {
-    @apply bg-white rounded-xl shadow p-4 w-full border border-gray-300 hover:shadow-lg transition-all duration-300;
+    @apply bg-card rounded-xl shadow p-4 w-full border border-border hover:shadow-lg transition-all duration-300;
   }
 }
