@@ -15,7 +15,7 @@ This project provides a dashboard for displaying financial metrics and charts. I
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/Shubham-567/finance-dashboard.git`
+1. Clone the repository: `git clone https://github.com/Shubham-567/Finance-Dashboard.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 4. Open the dashboard in your browser: `http://localhost:3000`
