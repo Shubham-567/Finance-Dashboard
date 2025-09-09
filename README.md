@@ -15,25 +15,51 @@ This project provides a dashboard for displaying financial metrics and charts. I
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/Shubham-567/Finance-Dashboard.git`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open the dashboard in your browser: `http://localhost:3000`
+1. Clone the repository: 
+    ```bash
+    git clone https://github.com/Shubham-567/Finance-Dashboard.git
+    ```
+2. Install dependencies: 
+    ```bash
+    npm install
+    ```
+3. Start the development server: 
+    ```bash
+    npm run dev
+    ```
+4. Open the dashboard in your browser: 
+    ```bash
+    http://localhost:3000
+    ```
 
 ## Components
 
-- `ClientsChart`: A chart component for displaying client data
+### Cards and Navbar
+
+- `Topbar`: A top navigation bar component
+- `MainCard`: A card component for displaying main overview card data
+- `FilterBar`: A filter bar component (3 Days, 7 Days, etc..)
 - `StatCard`: A card component for displaying statistical data
 - `ChartCard`: A card component for displaying charts
-- `Topbar`: A top navigation bar component
-- `MainCardSection`: A section component for displaying main cards
+
+### Sections to hold cards
+
+- `MainCardSection`: A section component for displaying two main cards
 - `StatSection`: A section component for displaying statistical data
+- `ChartSection`: A section component for displaying chartCards
+
+### Charts
+
+- `ClientsChart`: A chart component for displaying client data
+- `MonthlyMisChart`: A chart component for displaying monthly MIS data
+- `SipBusinessChart`: A chart component for displaying SIP business data
 
 ## API
 
 The project uses the following API endpoints:
 
 - `/api/finance/overview`: Retrieves financial overview data
+- `/api/finance/stats`: Retrieves financial statistics data
 
 ## Dependencies
 

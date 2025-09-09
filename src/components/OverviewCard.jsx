@@ -2,7 +2,7 @@
 
 import { ChevronDown, ChevronsDown, ChevronsUp } from "lucide-react";
 
-const MainCard = ({ title, value, mom, trend }) => {
+const OverviewCard = ({ title, value, mom, trend }) => {
   const isUp = trend === "up";
 
   return (
@@ -38,4 +38,4 @@ const MainCard = ({ title, value, mom, trend }) => {
   );
 };
 
-export default MainCard;
+export default OverviewCard;

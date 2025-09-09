@@ -1,9 +1,9 @@
 "use client";
 
-import MainCard from "@/components/MainCard";
+import OverviewCard from "@/components/CardCard";
 import { useEffect, useState } from "react";
 
-const MainCardSection = () => {
+const OverviewSection = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -24,13 +24,13 @@ const MainCardSection = () => {
     <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
       {data ? (
         <>
-          <MainCard
+          <OverviewCard
             title='AUM'
             value={data.aum.value}
             mom={data.aum.mom}
             trend={data.aum.trend}
           />
-          <MainCard
+          <OverviewCard
             title='SIP'
             value={data.sip.value}
             mom={data.sip.mom}
@@ -44,4 +44,4 @@ const MainCardSection = () => {
   );
 };
 
-export default MainCardSection;
+export default OverviewSection;

@@ -16,7 +16,7 @@ const StatSection = () => {
         const json = await res.json();
         setStats(json);
       } catch (error) {
-        console.error("Error fetching stats:", error);
+        console.error("Error fetching stats: ", error.message);
       }
     };
 
