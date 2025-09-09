@@ -2,7 +2,7 @@ import React from "react";
 
 const StatCard = ({ icon, title, value, amount }) => {
   return (
-    <div className='flex items-center justify-start gap-4 w-full max-lg:border border-border rounded p-2 max-lg:bg-[#fef2f2]'>
+    <div className='flex items-center justify-start gap-4 w-full max-lg:border border-border max-lg:rounded p-2 max-lg:bg-primary-light/50'>
       {icon}
 
       <div className='flex flex-col flex-1 pr-2 justify-center gap-2'>

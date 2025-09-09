@@ -2,34 +2,58 @@
 
 @import "tailwindcss";
 
-@layer base {
-  body {
-    background: hsl(0, 0%, 94%);
-    color: hsl(0, 0%, 5%);
-    font-family: "Inter", sans-serif;
-  }
-}
-
-@theme {
+:root {
   --color-background: hsl(210 17% 94%);
   --color-card: hsl(0 0% 100%);
-
   --color-txt-primary: hsl(210 10% 23%);
   --color-txt-muted: hsl(208 7% 46%);
-
   --color-primary: hsl(0 94% 64%);
   --color-primary-hover: hsl(357, 100%, 45%);
-
   --color-primary-light: hsl(0, 100%, 94%);
   --color-primary-light-hover: hsl(0, 100%, 89%);
-
   --color-primary-foreground: hsl(0 0% 100%);
-
   --color-secondary: hsl(216, 100%, 58%);
-
   --color-border: hsl(218, 12%, 84%);
   --color-success: hsl(134 61% 40%);
   --color-success-hover: hsl(142, 100%, 33%);
+}
+.dark {
+  --color-background: hsl(210 10% 15%);
+  --color-card: hsl(210 10% 20%);
+  --color-txt-primary: hsl(210 17% 94%);
+  --color-txt-muted: hsl(208 7% 66%);
+  --color-primary: hsl(0 94% 64%);
+  --color-primary-hover: hsl(0, 94%, 70%);
+  --color-primary-light: hsl(0, 20%, 22%);
+  --color-primary-light-hover: hsl(0, 20%, 27%);
+  --color-primary-foreground: hsl(0, 0%, 94%);
+  --color-secondary: hsl(216, 100%, 65%);
+  --color-border: hsl(210 10% 30%);
+  --color-success: hsl(134 61% 50%);
+  --color-success-hover: hsl(134, 61%, 60%);
+}
+
+@theme {
+  --color-background: var(--color-background-var);
+  --color-card: var(--color-card-var);
+  --color-txt-primary: var(--color-txt-primary-var);
+  --color-txt-muted: var(--color-txt-muted-var);
+  --color-primary: var(--color-primary-var);
+  --color-primary-hover: var(--color-primary-hover-var);
+  --color-primary-light: var(--color-primary-light-var);
+  --color-primary-light-hover: var(--color-primary-light-hover-var);
+  --color-primary-foreground: var(--color-primary-foreground-var);
+  --color-secondary: var(--color-secondary-var);
+  --color-border: var(--color-border-var);
+  --color-success: var(--color-success-var);
+  --color-success-hover: var(--color-success-hover-var);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-txt-primary);
+  }
 }
 
 @layer components {

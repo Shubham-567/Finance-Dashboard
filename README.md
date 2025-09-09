@@ -10,27 +10,28 @@ This project provides a dashboard for displaying financial metrics and charts. I
 
 - Displays financial metrics and charts
 - Responsive design for different screen sizes
+- Dark mode support
 - Includes various components for rendering charts, tables, and other UI elements
 - Utilizes Tailwind CSS for styling and layout
 
 ## Getting Started
 
-1. Clone the repository: 
-    ```bash
-    git clone https://github.com/Shubham-567/Finance-Dashboard.git
-    ```
-2. Install dependencies: 
-    ```bash
-    npm install
-    ```
-3. Start the development server: 
-    ```bash
-    npm run dev
-    ```
-4. Open the dashboard in your browser: 
-    ```bash
-    http://localhost:3000
-    ```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Shubham-567/Finance-Dashboard.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open the dashboard in your browser:
+   ```bash
+   http://localhost:3000
+   ```
 
 ## Components
 

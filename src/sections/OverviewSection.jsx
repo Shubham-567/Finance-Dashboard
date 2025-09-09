@@ -1,6 +1,6 @@
 "use client";
 
-import OverviewCard from "@/components/CardCard";
+import OverviewCard from "@/components/OverviewCard";
 import { useEffect, useState } from "react";
 
 const OverviewSection = () => {

@@ -9,6 +9,8 @@ const ChartCard = ({ title, children }) => {
       setLoading(true);
       await downloadPdf("pdf-content", "finance-dashboard.pdf");
       setLoading(false);
+    } else if (title === "Sip Business Chart") {
+      document.documentElement.classList.toggle("dark");
     } else {
       alert("view report");
     }
@@ -23,6 +25,8 @@ const ChartCard = ({ title, children }) => {
             ? "Loading..."
             : title.toLowerCase() === "clients"
             ? "Download PDF"
+            : title.toLowerCase() === "sip business chart"
+            ? "Toggle Dark Mode"
             : "View Reports"}
         </button>
       </div>

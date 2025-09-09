@@ -62,7 +62,7 @@ export default function Topbar() {
   return (
     <header className='w-full shadow-md'>
       {/* white navbar */}
-      <div className='bg-card py-2 px-4 md:px-8 flex items-center justify-between gap-4 md:gap-10'>
+      <div className='py-2 px-4 md:px-8 flex items-center justify-between gap-4 md:gap-10'>
         <Image
           src='/logo.png'
           width={80}
@@ -72,7 +72,7 @@ export default function Topbar() {
         />
 
         {/* search bar */}
-        <div className='flex flex-1 items-center bg-[#e5e7eb] border border-border rounded focus-within:ring-2 focus-within:ring-secondary shadow-lg shadow-[#e5e7eb]'>
+        <div className='flex flex-1 items-center bg-[#e5e7eb] dark:bg-card border border-border rounded focus-within:ring-2 focus-within:ring-secondary shadow-lg'>
           <input
             type='text'
             name='search'
@@ -81,12 +81,12 @@ export default function Topbar() {
             onKeyDown={(e) => {
               e.key === "Enter" ? handleSearch() : null;
             }}
-            placeholder='eg: Live Portfolio'
+            placeholder='Search (eg: Live Portfolio)'
             className='outline-none border-none w-full px-2 py-1 mr-1 bg-transparent'
           />
 
           <button
-            className='bg-[#d1d5dc] border-l border-border px-2 py-2 rounded cursor-pointer'
+            className='bg-background text-txt-primary border-l border-border px-2 py-2 rounded cursor-pointer'
             onClick={handleSearch}>
             <Search className='size-4' />
           </button>
