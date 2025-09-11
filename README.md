@@ -38,14 +38,14 @@ This project provides a dashboard for displaying financial metrics and charts. I
 ### Cards and Navbar
 
 - `Topbar`: A top navigation bar component
-- `MainCard`: A card component for displaying main overview card data
+- `OverviewCard`: A card component for displaying main overview card data
 - `FilterBar`: A filter bar component (3 Days, 7 Days, etc..)
 - `StatCard`: A card component for displaying statistical data
 - `ChartCard`: A card component for displaying charts
 
 ### Sections to hold cards
 
-- `MainCardSection`: A section component for displaying two main cards
+- `OverviewCardSection`: A section component for displaying two main cards
 - `StatSection`: A section component for displaying statistical data
 - `ChartSection`: A section component for displaying chartCards
 
